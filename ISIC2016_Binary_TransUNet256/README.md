@@ -37,13 +37,13 @@ Here are a few visual examples showing **dermoscopic skin images and correspondi
 Each sample contains the **original image**, **GT (Ground Truth) overlay**, and **GT boundary** for clear lesion localization visualization.  
 
 <p align="center">
-  <img src="https://github.com/HussamUmer/MedSegBench-SegLab/raw/main/ISIC2016_Binary_TransUNet256/outputs/image_1.png" width="48%" alt="ISIC2016 Sample 1"/>
+  <img src="https://github.com/HussamUmer/MedSegBench-SegLab/raw/main/ISIC2016_Binary_TransUNet256/outputs/image_1.png" width="100%" alt="ISIC2016 Sample 1"/>
   <br>
   <em>🖼️ Figure 1 — Input Image with GT Overlay & Boundary</em>
 </p>
 
 <p align="center">
-  <img src="https://github.com/HussamUmer/MedSegBench-SegLab/raw/main/ISIC2016_Binary_TransUNet256/outputs/image_2.png" width="48%" alt="ISIC2016 Sample 2"/>
+  <img src="https://github.com/HussamUmer/MedSegBench-SegLab/raw/main/ISIC2016_Binary_TransUNet256/outputs/image_2.png" width="100%" alt="ISIC2016 Sample 2"/>
   <br>
   <em>🖼️ Figure 2 — Input Image with GT Overlay & Boundary</em>
 </p>
