@@ -89,6 +89,7 @@ All metrics, speed, and calibration plots are generated automatically — so ben
 ## 📘 Projects
 
 - **[🔬 ISIC 2016 — Skin Lesion Segmentation (256×256) with TransUNet ](https://github.com/HussamUmer/MedSegBench-SegLab/blob/main/ISIC2016_Binary_TransUNet256/README.md)** 
+
   <sub>Folder: `ISIC2016_Binary_TransUNet256`</sub>
 > (Binary segmentation notebooks coming soon... stay tuned 🧩)
 
