@@ -42,12 +42,6 @@ Each sample contains the **original image**, **GT (Ground Truth) overlay**, and 
   <em>🖼️ Figure 1 — Input Image with GT Overlay & Boundary</em>
 </p>
 
-<p align="center">
-  <img src="https://github.com/HussamUmer/MedSegBench-SegLab/raw/main/ISIC2016_Binary_TransUNet256/outputs/image_2.png" width="100%" alt="ISIC2016 Sample 2"/>
-  <br>
-  <em>🖼️ Figure 2 — Input Image with GT Overlay & Boundary</em>
-</p>
-
 🔗 [View All Sample Outputs →](https://github.com/HussamUmer/MedSegBench-SegLab/tree/main/ISIC2016_Binary_TransUNet256/outputs)  
 *(These visuals are generated directly from the notebook — showing dataset-level consistency across MedSegBench pipelines.)*
 
