@@ -15,6 +15,9 @@ Medical image segmentation research often struggles with **non-reproducible expe
 
 You focus on your model 🧩 — we handle the rest.
 
+> 💡 While conducting my research on developing a **TransUNet-Lite**, I originally built this notebook to **train and evaluate my own models**.  
+It has since been tested on **three architectures** — one standard **TransUNet** and **two novel lightweight variants** that I designed during my experiments.
+
 ---
 
 ## 📦 What’s Inside
