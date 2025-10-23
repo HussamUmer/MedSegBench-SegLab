@@ -1,4 +1,4 @@
-# 🚀 MedSegBench-SegLab — Plug-and-Play Binary & Multi-Class 🧠🩺  
+# 🚀 MedSegBench-SegLab — Plug-and-Play Binary & Multi-Class 🧠🩺 Segmentation 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/Python-3.8+-yellow)
 ![PyTorch](https://img.shields.io/badge/PyTorch-🧩-red)
