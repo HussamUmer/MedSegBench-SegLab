@@ -22,7 +22,7 @@ You focus on your model 🧩 — we handle the rest.
 This repository includes complete **segmentation benchmark notebooks** built over the **MedSegBench datasets** (35+ datasets, 60,000+ medical images 🏥), covering both:
 
 - 🩸 **Binary Segmentation** — single foreground class (e.g., tumor vs. non-tumor)
-- 🫀 **Multi-Class Segmentation** — multiple organs, lesions, or tissue regions *(coming soon...)*
+- 🩺 **Multi-Class Segmentation** — multiple organs, lesions, or tissue regions *(coming soon...)*
 
 Each notebook is **Colab-ready**, self-contained, and follows the exact same structure for **fair apples-to-apples model comparison** 🍎🍏.
 
@@ -88,13 +88,13 @@ All metrics, speed, and calibration plots are generated automatically — so ben
 
 ## 📘 Projects
 
-- **[ISIC 2016 — Skin Lesion Segmentation (256×256) with TransUNet 🔬](https://github.com/HussamUmer/MedSegBench-SegLab/blob/main/ISIC2016_Binary_TransUNet256/README.md)**  
+- **[🔬 ISIC 2016 — Skin Lesion Segmentation (256×256) with TransUNet ](https://github.com/HussamUmer/MedSegBench-SegLab/blob/main/ISIC2016_Binary_TransUNet256/README.md)** 
   <sub>Folder: `ISIC2016_Binary_TransUNet256`</sub>
 > (Binary segmentation notebooks coming soon... stay tuned 🧩)
 
 ---
 
-# 🫀 Multi-Class Segmentation Projects
+# 🩺 Multi-Class Segmentation Projects
 
 Multi-class segmentation deals with **organ-level** or **region-level** predictions, where multiple anatomical structures are labeled simultaneously.  
 The same 13-step framework extends naturally to multi-class datasets with per-class metrics, confusion matrices, and class-wise calibration.
