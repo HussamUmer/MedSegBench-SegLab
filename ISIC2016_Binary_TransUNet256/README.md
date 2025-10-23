@@ -40,6 +40,27 @@ Here are a few visual examples showing **dermoscopic skin images and correspondi
 
 ---
 
+## 🌐 Dataset Download — ISIC 2016 (256×256)
+
+The **ISIC 2016 Skin Lesion Dataset** used in this notebook is part of the **MedSegBench v1** release hosted on **Zenodo**.  
+Each dataset in MedSegBench comes as a preprocessed `.npz` archive with predefined splits (train/val/test), standardized resolutions, and verified MD5 checksums for full reproducibility.  
+
+**Download Details:**
+- **Dataset:** ISIC 2016 (256×256)
+- **Direct Link:** [Download from Zenodo](https://zenodo.org/records/13358372/files/isic2016_256.npz?download=1)
+- **MD5 Checksum:** `ee3fc6b5fffdc039e963ab21ff18e42e`
+- **File Size:** ~121 MB
+- **Format:** `isic2016_256.npz`
+- **Zenodo Record:** [https://zenodo.org/records/13358372](https://zenodo.org/records/13358372)
+
+✅ **Usage:**  
+The notebook automatically downloads this dataset to your `MEDSEGBENCH_DIR` if it’s not already present and verifies its integrity using the MD5 checksum.  
+If the checksum mismatches, the system re-downloads the file to ensure complete reproducibility.  
+
+
+
+---
+
 ## ⚙️ Model Used — TransUNet 🧬
 
 The notebook uses **TransUNet** as the sample model placed inside **Step 6 — MODEL BLOCK**, demonstrating how any architecture can seamlessly integrate into the MedSegBench-SegLab pipeline.
