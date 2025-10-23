@@ -33,10 +33,24 @@ This dataset is part of the **MedSegBench** benchmark collection — a unified s
 
 ## 🧩 Visual Samples from Dataset
 
-Here are a few visual examples showing **dermoscopic skin images and corresponding ground truth masks** from the ISIC 2016 dataset:
+Here are a few visual examples showing **dermoscopic skin images and corresponding ground truth masks** from the ISIC 2016 dataset.  
+Each sample contains the **original image**, **GT (Ground Truth) overlay**, and **GT boundary** for clear lesion localization visualization.  
 
-🔗 [View Sample Dataset Images →](https://drive.google.com/drive/folders/1t40QUhLEmaqYYyyg8uuGAoXVgLP0b_n8?usp=sharing)  
-*(These samples are generated directly from the notebook — image + GT overlay & boundaries.)*
+<p align="center">
+  <img src="https://github.com/HussamUmer/MedSegBench-SegLab/raw/main/ISIC2016_Binary_TransUNet256/outputs/image_1.png" width="48%" alt="ISIC2016 Sample 1"/>
+  <br>
+  <em>🖼️ Figure 1 — Input Image with GT Overlay & Boundary</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/HussamUmer/MedSegBench-SegLab/raw/main/ISIC2016_Binary_TransUNet256/outputs/image_2.png" width="48%" alt="ISIC2016 Sample 2"/>
+  <br>
+  <em>🖼️ Figure 2 — Input Image with GT Overlay & Boundary</em>
+</p>
+
+🔗 [View All Sample Outputs →](https://github.com/HussamUmer/MedSegBench-SegLab/tree/main/ISIC2016_Binary_TransUNet256/outputs)  
+*(These visuals are generated directly from the notebook — showing dataset-level consistency across MedSegBench pipelines.)*
+
 
 ---
 
