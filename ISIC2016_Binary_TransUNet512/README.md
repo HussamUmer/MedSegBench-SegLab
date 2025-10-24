@@ -10,3 +10,14 @@ This project is an extended version of the 256×256 ISIC 2016 segmentation noteb
 
 ✅ The rest of the 13-step MedSegBench-SegLab pipeline remains identical; only the dataset resolution and MD5 checksum differ.
 
+## 🚀 Open Notebook in Colab
+
+To directly explore and run this project on Google Colab, click below 👇  
+
+<p align="center">
+  <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/ISIC2016_Binary_TransUNet512/notebook/ISIC2016_Binary_TransUNet512.ipynb" target="_blank">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"/>
+  </a>
+</p>
+
+*(Runs end-to-end — just update **Step 6 (MODEL BLOCK)** with your model 💡)*
