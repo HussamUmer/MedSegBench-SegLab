@@ -10,3 +10,14 @@ This project applies the MedSegBench-SegLab pipeline to the **Covid19RadioMSBenc
 
 ✅ The only change from previous notebooks is the dataset (Covid19RadioMSBench) and its corresponding resolution and MD5 checksum; all other 13 steps in the pipeline remain identical.
 
+## 🚀 Open Notebook in Colab
+
+To directly explore and run this project on Google Colab, click below 👇  
+
+<p align="center">
+  <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Covid19Radio_Binary_TransUNet256/note book/Covid19Radio_Binary_TransUNet256.ipynb" target="_blank">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"/>
+  </a>
+</p>
+
+*(Runs end-to-end — just update **Step 6 (MODEL BLOCK)** with your model 💡)*
