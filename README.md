@@ -95,6 +95,9 @@ All metrics, speed, and calibration plots are generated automatically — so ben
   <sub>Folder: `ISIC2016_Binary_TransUNet256`</sub>
 - **[ISIC 2016 — Skin Lesion Segmentation (512×512) with TransUNet 🔬](https://github.com/HussamUmer/MedSegBench-SegLab/blob/main/ISIC2016_Binary_TransUNet512/README.md)**  
   <sub>Folder: `ISIC2016_Binary_TransUNet512`</sub>
+- **[Covid19RadioMSBench — Chest X-Ray Lung Segmentation (256×256) with TransUNet 🫁](https://github.com/HussamUmer/MedSegBench-SegLab/tree/main/Covid19Radio_Binary_TransUNet256)**  
+  <sub>Folder: `Covid19Radio_Binary_TransUNet256`</sub>
+
 > (Binary segmentation notebooks coming soon... stay tuned 🧩)
 
 ---
