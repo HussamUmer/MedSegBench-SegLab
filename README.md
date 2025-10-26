@@ -112,7 +112,8 @@ All metrics, speed, and calibration plots are generated automatically — so ben
   <sub>Folder: `RoboTool_Binary_TransUNet256`</sub>
 - **[Promise12 — Prostate MRI Segmentation (256×256) with TransUNet 🧬](https://github.com/HussamUmer/MedSegBench-SegLab/tree/main/Promise12_Binary_TransUNet256)**  
   <sub>Folder: `Promise12_Binary_TransUNet256`</sub>
-
+- **[BUSI — Breast Ultrasound Lesion Segmentation (256×256) with TransUNet 🩺](https://github.com/HussamUmer/MedSegBench-SegLab/tree/main/BUSI_Binary_TransUNet256)**  
+  <sub>Folder: `BUSI_Binary_TransUNet256`</sub>
 
 > (Binary segmentation notebooks coming soon... stay tuned 🧩)
 
