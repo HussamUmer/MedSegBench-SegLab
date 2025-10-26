@@ -18,6 +18,15 @@ You focus on your model 🧩 — we handle the rest.
 > 💡 While conducting my research on developing a **TransUNet-Lite**, I originally built this notebook to **train and evaluate my own models**.  
 It has since been tested on **three architectures** — one standard **TransUNet** and **two novel lightweight variants** that I designed during my experiments.
 
+> > ⚙️ **Note:**  
+> For each dataset notebook, I’m currently running up to **Step 5️⃣** — mainly to update dataset paths, verify file structures, and ensure that all **DataLoaders** function correctly.  
+> Full end-to-end runs (training → evaluation → visualization) will be completed later or integrated into the **Vision4Healthcare** repository.  
+>  
+> This phase focuses purely on the **dataset preparation and validation** 🧩, while new and optimized models for **Step 6 — MODEL BLOCK** 🧠 will be introduced in a dedicated upcoming repository.
+
+
+
+
 ---
 
 ## 📦 What’s Inside
