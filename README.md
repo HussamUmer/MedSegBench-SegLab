@@ -38,7 +38,9 @@ Each notebook is **Colab-ready**, self-contained, and follows the exact same str
 >  
 > This limited run was purely for **functional validation** and not full model training. You can perform full training yourself directly in **Google Colab** or **Jupyter Notebook** by simply running all cells end-to-end.  
 >  
-> These same projects will later be integrated into the **Vision4Healthcare** experiments 🧬, where I’ll use **different and optimized models** for **Step 6 — MODEL BLOCK 🧠** to extend benchmarking and performance analysis.
+> I will use the **same notebooks** for my **research, novel, and comparative studies** 🧬.  
+> The **Step 6 — MODEL BLOCK 🧠** will be provided for **almost all existing segmentation models**, ready to be **plugged into any dataset notebook**.  
+> These model implementations will be uploaded to a **separate upcoming repository** for modular and flexible experimentation.
 
 ---
 
