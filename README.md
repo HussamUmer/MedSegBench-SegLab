@@ -32,11 +32,13 @@ Each notebook is **Colab-ready**, self-contained, and follows the exact same str
 
 ---
 
-> > ⚙️ **Note:**  
-> For each dataset notebook, I’m currently running up to **Step 5️⃣** — mainly to update dataset paths, verify file structures, and ensure that all **DataLoaders** function correctly.  
-> Full end-to-end runs (training → evaluation → visualization) will be completed later or integrated into the **Vision4Healthcare** repository.  
+> ⚙️ **Note:**  
+> I’ve run **each dataset notebook for 1 epoch** 🧪 — just to confirm that all components (dataset paths, file structures, augmentations, and DataLoaders) work correctly and the pipelines execute without errors.  
+> The only exception is the **Covid19Radio project**, which I haven’t executed yet but am confident will work flawlessly given its identical structure.  
 >  
-> This phase focuses purely on the **dataset preparation and validation** 🧩, while new and optimized models for **Step 6 — MODEL BLOCK** 🧠 will be introduced in a dedicated upcoming repository.
+> This limited run was purely for **functional validation** and not full model training. You can perform full training yourself directly in **Google Colab** or **Jupyter Notebook** by simply running all cells end-to-end.  
+>  
+> These same projects will later be integrated into the **Vision4Healthcare** experiments 🧬, where I’ll use **different and optimized models** for **Step 6 — MODEL BLOCK 🧠** to extend benchmarking and performance analysis.
 
 ---
 
