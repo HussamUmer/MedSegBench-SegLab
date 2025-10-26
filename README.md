@@ -32,6 +32,14 @@ Each notebook is **Colab-ready**, self-contained, and follows the exact same str
 
 ---
 
+> > ⚙️ **Note:**  
+> For each dataset notebook, I’m currently running up to **Step 5️⃣** — mainly to update dataset paths, verify file structures, and ensure that all **DataLoaders** function correctly.  
+> Full end-to-end runs (training → evaluation → visualization) will be completed later or integrated into the **Vision4Healthcare** repository.  
+>  
+> This phase focuses purely on the **dataset preparation and validation** 🧩, while new and optimized models for **Step 6 — MODEL BLOCK** 🧠 will be introduced in a dedicated upcoming repository.
+
+---
+
 ## 🧩 What Does Each Notebook Include?
 
 Each notebook follows a **13-step universal pipeline**:
@@ -77,14 +85,6 @@ It includes over **60,000+ images** from modalities like:
 - 🩻 **X-ray & Ultrasound (Chest, Abdomen, Musculoskeletal)**  
 
 Each dataset is provided in `.npz` format with **predefined splits**, **unified resolution (128/256/512)**, and **MD5 verification** for reproducibility.
-
----
-
-> > ⚙️ **Note:**  
-> For each dataset notebook, I’m currently running up to **Step 5️⃣** — mainly to update dataset paths, verify file structures, and ensure that all **DataLoaders** function correctly.  
-> Full end-to-end runs (training → evaluation → visualization) will be completed later or integrated into the **Vision4Healthcare** repository.  
->  
-> This phase focuses purely on the **dataset preparation and validation** 🧩, while new and optimized models for **Step 6 — MODEL BLOCK** 🧠 will be introduced in a dedicated upcoming repository.
 
 ---
 
