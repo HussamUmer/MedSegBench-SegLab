@@ -99,6 +99,8 @@ All metrics, speed, and calibration plots are generated automatically — so ben
   <sub>Folder: `Covid19Radio_Binary_TransUNet256`</sub>
 - **[Kvasir — Endoscopy Polyp Segmentation (256×256) with TransUNet 🔬](https://github.com/HussamUmer/MedSegBench-SegLab/tree/main/Kvasir_Binary_TransUNet256)**  
   <sub>Folder: `Kvasir_Binary_TransUNet256`</sub>
+- **[RoboTool — Endoscopic Surgical Tool Segmentation (256×256) with TransUNet ⚙️](https://github.com/HussamUmer/MedSegBench-SegLab/tree/main/RoboTool_Binary_TransUNet256)**  
+  <sub>Folder: `RoboTool_Binary_TransUNet256`</sub>
 
 
 > (Binary segmentation notebooks coming soon... stay tuned 🧩)
