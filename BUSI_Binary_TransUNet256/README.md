@@ -17,7 +17,7 @@ To directly explore and run this project on Google Colab, click below 👇
 
 <p align="center">
   <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/BUSI_Binary_TransUNet256
-/notebook/BUSI_Binary_TransUNet256.ipynb (1)" target="_blank">
+/notebook/BUSI_Binary_TransUNet256.ipynb" target="_blank">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"/>
   </a>
 </p>
