@@ -7,7 +7,7 @@ This project implements the MedSegBench-SegLab pipeline on the **BUSI (Breast Ul
 - **Task:** Binary Segmentation *(Lesion vs. Background)*
 - **Modality:** Ultrasound
 - **Download Link:** [Download from Zenodo](https://zenodo.org/records/13358372/files/busi_256.npz?download=1)
-- **MD5 Checksum:** `f5dbdbfe05b80808c4d541a63f64521c`
+- **MD5 Checksum:** `198aea70968b71adf593b32c41a6e995`
 
 ✅ This notebook follows the standardized 13-step MedSegBench-SegLab pipeline. Only the dataset, modality, and MD5 checksum are updated for the **BUSI Breast Ultrasound** dataset.
 
