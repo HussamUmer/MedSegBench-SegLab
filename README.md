@@ -8,6 +8,10 @@
 
 ---
 
+> 🔧 I’m currently developing **Step-6 plug-and-play models** 🧠, which I plan to **release by tomorrow** — stay tuned, and thank you for your support! 🚀
+
+---
+
 ## 🌟 Why This Repo?
 
 Medical image segmentation research often struggles with **non-reproducible experiments** — different splits, preprocessing, and logging styles make fair comparison impossible.  
