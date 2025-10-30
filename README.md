@@ -8,10 +8,6 @@
 
 ---
 
-> 🔧 I’m currently developing **Step-6 plug-and-play models** 🧠, which I plan to **release by tomorrow** — stay tuned, and thank you for your support! 🚀
-
----
-
 ## 🌟 Why This Repo?
 
 Medical image segmentation research often struggles with **non-reproducible experiments** — different splits, preprocessing, and logging styles make fair comparison impossible.  
@@ -42,8 +38,6 @@ Each notebook is **Colab-ready**, self-contained, and follows the exact same str
 >  
 > This limited run was purely for **functional validation** and not full model training. You can perform full training yourself directly in **Google Colab** or **Jupyter Notebook** by simply running all cells end-to-end.  
 >  
-> The **Step 6 — MODEL BLOCK 🧠** will be provided for **almost all existing segmentation models**, ready to be **plugged into any dataset notebook**.  
-> These model implementations will be uploaded to a **separate upcoming repository** for modular and flexible experimentation.
 
 ---
 
