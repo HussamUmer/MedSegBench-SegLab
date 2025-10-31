@@ -181,7 +181,7 @@ Already embedded in each dataset notebook as the **default** example.
 
 ### 3) U-Net++
 - **Open in Colab:**  
-  <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/U_Net_plusplus.ipynb" target="_blank">
+  <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/U_Net_PlusPlus.ipynb" target="_blank">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open U-Net++ in Colab"/>
   </a>
 
