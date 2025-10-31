@@ -209,7 +209,7 @@ Already embedded in each dataset notebook as the **default** example.
 > Copy **Cells 1/4 – 4/4** into Step 6 of any dataset notebook.
 
 > 🧩 **Note:**  
-> The above **three models (U-Net, U-Net++, and DeepLabV3+)** are derived from my main research project in the **Vision4Healthcare** repository:  
+> The above **three models (U-Net, U-Net++, and DeepLabV3+)** are derived from one of my main learning and experimental project in the **Vision4Healthcare** repository:  
 > 🔗 [UNet Family vs DeepLabV3+: Strong, Efficient Baselines on ISIC-2016](https://github.com/HussamUmer/Vision4Healthcare/tree/main/SegCompare_ISIC2016_UNetFamily_DeepLabV3Plus)  
 >  
 > That project served as the foundation for these Step-6 plug-and-play models.
