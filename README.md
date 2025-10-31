@@ -163,7 +163,13 @@ Each model has **4 cells** that you must copy in order:
    - Helps estimate the model’s size, complexity, and hardware requirements.
 
 
-> ✅ Once inserted, no edits are needed — the pipeline automatically manages training, metrics, visualization, calibration, and speed/VRAM benchmarking.
+> ✅ Once inserted, no edits are needed — the pipeline automatically manages training, metrics, visualization, calibration, and speed/VRAM benchmarking.  
+
+> ⚙️ **Additional Tweaks:**  
+> - After pasting the model, go to **Step 8 (Model Training, Cell 1)** and update the line  
+>   `model = model_name` → replace it with your selected model’s variable (e.g., `model = unet_r34_model`).  
+> - *(Optional)* In **Step 0**, you may also rename the `MODEL_TAG`, change artifact paths, or update directory names for logs, checkpoints, and figures to better organize your runs.
+
 
 ---
 
