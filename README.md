@@ -134,9 +134,7 @@ The same 13-step framework extends naturally to multi-class datasets with per-cl
 This folder contains ready-to-use **model blocks** for **Step 6 — MODEL BLOCK** of the Seg-Lab pipeline 🧩.  
 Each notebook is a *plug-and-play* segment that can be inserted directly into any dataset notebook (ISIC, Kvasir, BUSI …).  
 
-> ⚠️ **Important:** These model notebooks **will not run independently**.  
-> They depend on the Seg-Lab pipeline (Steps 0–5 & 7–13).  
-> Always **copy the cells into Step 6** of a dataset notebook before execution.
+> ⚠️ These model notebooks are **not standalone**—they rely on the Seg-Lab pipeline (Steps 0–5 & 7–13). Running them alone will cause missing-context errors.
 
 ---
 
@@ -156,24 +154,14 @@ Each model has **4 cells** that you must copy in order:
      - `activation = None` (loss handles activation).  
 
 3️⃣ **Cell 3/4 — Instantiate & Shape Check**  
-   - Paste the model-creation snippet, e.g.:  
-     ```python
-     model = build_unet_r34_binary()
-     xb, yb = next(iter(train_loader))
-     out = model(xb)
-     print("logits:", tuple(out["logits"].shape))
-     ```  
-   - (Optional) set a tag for checkpoints/logs:  
-     ```python
-     MODEL_TAG = "UNet-R34"
-     ```  
+   - Creates the model instance and runs a quick shape verification using a sample batch from the dataloader.  
+   - Ensures that the output tensor matches the required format `{"logits": (B, C, H, W)}` for smooth integration with the pipeline.  
+   - Optionally sets a `MODEL_TAG` for naming checkpoints and logs.  
 
 4️⃣ **Cell 4/4 — Parameter Count (Optional)**  
-   - Paste the parameter summary:  
-     ```python
-     num_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
-     print(f"[PARAMS] {MODEL_TAG}: {num_params/1e6:.2f} M")
-     ```  
+   - Calculates the total number of trainable parameters in the model and prints them for reference.  
+   - Helps estimate the model’s size, complexity, and hardware requirements.
+
 
 > ✅ Once inserted, no edits are needed — the pipeline automatically manages training, metrics, visualization, calibration, and speed/VRAM benchmarking.
 
@@ -182,7 +170,8 @@ Each model has **4 cells** that you must copy in order:
 ## 📚 Available Models
 
 ### 1️⃣ TransUNet (Default)
-Already included in every dataset notebook as the **default baseline**.  
+Already embedded in each dataset notebook as the **default** example.  
+- **Action:** *No copy needed.* One can replace it with any model below by following the flow above.
 *No copy required — use as is.*
 
 ---
@@ -191,7 +180,7 @@ Already included in every dataset notebook as the **default baseline**.
 <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/U_Net.ipynb" target="_blank">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open U-Net in Colab"/>
 </a>  
-- Copy **Cells 1/4 – 4/4** into Step 6 of your dataset notebook.
+> Copy **Cells 1/4 – 4/4** into Step 6 of any dataset notebook.
 
 ---
 
@@ -199,7 +188,7 @@ Already included in every dataset notebook as the **default baseline**.
 <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/U_Net_PlusPlus.ipynb" target="_blank">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open U-Net++ in Colab"/>
 </a>  
-- Copy **Cells 1/4 – 4/4** into Step 6 of your dataset notebook.
+> Copy **Cells 1/4 – 4/4** into Step 6 of any dataset notebook.
 
 ---
 
@@ -207,7 +196,7 @@ Already included in every dataset notebook as the **default baseline**.
 <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/DeepLabV3%2B.ipynb" target="_blank">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open DeepLabV3+ in Colab"/>
 </a>  
-- Copy **Cells 1/4 – 4/4** into Step 6 of your dataset notebook.
+> Copy **Cells 1/4 – 4/4** into Step 6 of any dataset notebook.
 
 ---
 
@@ -217,7 +206,7 @@ Already included in every dataset notebook as the **default baseline**.
 - [ ] `IMAGE_SIZE` matches dataset (128 / 256 / 512).  
 - [ ] `AMP_ON` (mixed precision) can remain True.  
 
-> 🔧 More Step-6 plug-and-play models are coming soon! If you want a specific architecture, open a PR or request it — I’ll add it to the collection ✨
+> 🔧 I’m actively adding more **Step-6 plug-and-play models**. If anyone have a favorite architecture, open a PR or request it — I’ll add it to the collection ✨
 
 
 ---
