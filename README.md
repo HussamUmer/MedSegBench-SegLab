@@ -129,6 +129,91 @@ The same 13-step framework extends naturally to multi-class datasets with per-cl
 
 ---
 
+## 🧠 Step-6 Plug-and-Play Segmentation Models
+
+This folder contains **drop-in model blocks** for **Step 6 — MODEL BLOCK** of the Seg-Lab pipeline.  
+**How to use:** open a model notebook below → **copy the indicated cells** → paste into **Step 6** of *any* dataset notebook → run all.
+
+> ⚠️ **Important:** These model notebooks **are not standalone**. They depend on the Seg-Lab pipeline (Steps 0–5 & 7–13).  
+> Running them alone will raise errors (missing dataloaders, losses, logger, etc.). Always **copy/paste into Step 6** of a dataset notebook.
+
+---
+
+### 🔧 Standard Copy-Paste Flow (for any model)
+
+1) **Cell A — Model class & helpers**  
+   - Copy the entire cell that defines the model (and any small helper blocks).  
+   - Paste into **Step 6 — MODEL BLOCK** (above any “instantiate” lines).
+
+2) **Cell B — Instantiate & tag**  
+   - Paste the model creation line(s) and set:
+     - `MODEL_TAG = "YourModelName"` (used in filenames & logs)
+     - Ensure `num_classes = C` (→ `1` for binary; `>1` for multiclass)
+   - The **forward contract** must return:  
+     `{"logits": torch.Tensor[B, C, H, W]}`
+
+3) **Cell C — Sanity run (optional)**  
+   - If provided in the model notebook, copy the quick dummy-tensor check to ensure `shape == [B,C,H,W]`.
+
+> ✅ No other changes are needed. The pipeline will handle losses, metrics, logging, plots, speed/VRAM, calibration, and visuals.
+
+---
+
+## 📚 Available Models
+
+### 1) TransUNet (Default)
+Already embedded in each dataset notebook as the **default** example.  
+- **Action:** *No copy needed.* You can replace it with any model below by following the flow above.
+
+---
+
+### 2) U-Net
+- **Open in Colab:**  
+  <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/U_Net.ipynb" target="_blank">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open U-Net in Colab"/>
+  </a>
+
+**Copy into Step 6:**
+- Cell A: `UNet` class (+ small helpers if any)  
+- Cell B: `model = UNet(num_classes=C, ...); MODEL_TAG = "UNet"`
+
+---
+
+### 3) U-Net++
+- **Open in Colab:**  
+  <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/U_Net++.ipynb" target="_blank">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open U-Net++ in Colab"/>
+  </a>
+
+**Copy into Step 6:**
+- Cell A: `UNetPlusPlus` (a.k.a. `UNetPP`) class (+ dense-skip helpers)  
+- Cell B: `model = UNetPlusPlus(num_classes=C, ...); MODEL_TAG = "UNet++"`
+
+---
+
+### 4) DeepLabV3+
+- **Open in Colab:**  
+  <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/DeepLabV3%2B.ipynb" target="_blank">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open DeepLabV3+ in Colab"/>
+  </a>
+
+**Copy into Step 6:**
+- Cell A: `DeepLabV3Plus` definition (or wrapper around torchvision/timm)  
+- Cell B: `model = DeepLabV3Plus(num_classes=C, ...); MODEL_TAG = "DeepLabV3+"`
+
+---
+
+### ✅ Quick Checklist (before you run)
+
+- [ ] `C` is correct (Binary → `C=1`; Multiclass → number of classes).  
+- [ ] `forward(x)` returns `{"logits": B×C×H×W}` (dict key **must** be `"logits"`).  
+- [ ] `IMAGE_SIZE` matches your dataset notebook (128/256/512).  
+- [ ] Mixed precision (`AMP_ON`) can stay **on**; no model change needed.  
+
+> 🔧 I’m actively adding more **Step-6 plug-and-play models**. If you have a favorite architecture, open a PR or request—happy to include it!
+
+
+---
 ## 🧾 Citation
 
 If you use this repository or MedSegBench datasets, please cite:
