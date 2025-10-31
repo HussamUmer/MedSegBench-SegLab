@@ -172,7 +172,8 @@ Each model has **4 cells** that you must copy in order:
 ### 1️⃣ TransUNet (Default)
 Already embedded in each dataset notebook as the **default** example.  
 - **Action:** *No copy needed.* One can replace it with any model below by following the flow above.
-*No copy required — use as is.*
+
+> *No copy required — use as is.*
 
 ---
 
@@ -180,6 +181,7 @@ Already embedded in each dataset notebook as the **default** example.
 <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/U_Net.ipynb" target="_blank">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open U-Net in Colab"/>
 </a>  
+
 > Copy **Cells 1/4 – 4/4** into Step 6 of any dataset notebook.
 
 ---
@@ -188,6 +190,7 @@ Already embedded in each dataset notebook as the **default** example.
 <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/U_Net_PlusPlus.ipynb" target="_blank">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open U-Net++ in Colab"/>
 </a>  
+
 > Copy **Cells 1/4 – 4/4** into Step 6 of any dataset notebook.
 
 ---
@@ -196,6 +199,7 @@ Already embedded in each dataset notebook as the **default** example.
 <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/DeepLabV3%2B.ipynb" target="_blank">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open DeepLabV3+ in Colab"/>
 </a>  
+
 > Copy **Cells 1/4 – 4/4** into Step 6 of any dataset notebook.
 
 ---
