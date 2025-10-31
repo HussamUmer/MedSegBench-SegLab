@@ -129,88 +129,95 @@ The same 13-step framework extends naturally to multi-class datasets with per-cl
 
 ---
 
-## 🧠 Step-6 Plug-and-Play Segmentation Models
+## 🧠 Step-6 Plug-and-Play Segmentation Models  
 
-This folder contains **drop-in model blocks** for **Step 6 — MODEL BLOCK** of the Seg-Lab pipeline.  
-**How to use:** open a model notebook below → **copy the indicated cells** → paste into **Step 6** of *any* dataset notebook → run all.
+This folder contains ready-to-use **model blocks** for **Step 6 — MODEL BLOCK** of the Seg-Lab pipeline 🧩.  
+Each notebook is a *plug-and-play* segment that can be inserted directly into any dataset notebook (ISIC, Kvasir, BUSI …).  
 
-> ⚠️ **Important:** These model notebooks **are not standalone**. They depend on the Seg-Lab pipeline (Steps 0–5 & 7–13).  
-> Running them alone will raise errors (missing dataloaders, losses, logger, etc.). Always **copy/paste into Step 6** of a dataset notebook.
+> ⚠️ **Important:** These model notebooks **will not run independently**.  
+> They depend on the Seg-Lab pipeline (Steps 0–5 & 7–13).  
+> Always **copy the cells into Step 6** of a dataset notebook before execution.
 
 ---
 
-### 🔧 Standard Copy-Paste Flow (for any model)
+### 🔧 Standard Copy-Paste Flow (for all models)
 
-1) **Cell A — Model class & helpers**  
-   - Copy the entire cell that defines the model (and any small helper blocks).  
-   - Paste into **Step 6 — MODEL BLOCK** (above any “instantiate” lines).
+Each model has **4 cells** that you must copy in order:
 
-2) **Cell B — Instantiate & tag**  
-   - Paste the model creation line(s) and set:
-     - `MODEL_TAG = "YourModelName"` (used in filenames & logs)
-     - Ensure `num_classes = C` (→ `1` for binary; `>1` for multiclass)
-   - The **forward contract** must return:  
-     `{"logits": torch.Tensor[B, C, H, W]}`
+1️⃣ **Cell 1/4 — Imports & Wrapper**  
+   - Copy imports and the `SMPWrap` (or equivalent).  
+   - Ensures `forward(x) → {"logits": (B, C, H, W)}` for pipeline compatibility.  
 
-3) **Cell C — Sanity run (optional)**  
-   - If provided in the model notebook, copy the quick dummy-tensor check to ensure `shape == [B,C,H,W]`.
+2️⃣ **Cell 2/4 — Builder Function**  
+   - Copy the `build_*()` definition.  
+   - Confirm:  
+     - `in_channels = 3`  
+     - `classes = C` (→ `1` for binary, `>1` for multiclass)  
+     - `activation = None` (loss handles activation).  
 
-> ✅ No other changes are needed. The pipeline will handle losses, metrics, logging, plots, speed/VRAM, calibration, and visuals.
+3️⃣ **Cell 3/4 — Instantiate & Shape Check**  
+   - Paste the model-creation snippet, e.g.:  
+     ```python
+     model = build_unet_r34_binary()
+     xb, yb = next(iter(train_loader))
+     out = model(xb)
+     print("logits:", tuple(out["logits"].shape))
+     ```  
+   - (Optional) set a tag for checkpoints/logs:  
+     ```python
+     MODEL_TAG = "UNet-R34"
+     ```  
+
+4️⃣ **Cell 4/4 — Parameter Count (Optional)**  
+   - Paste the parameter summary:  
+     ```python
+     num_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+     print(f"[PARAMS] {MODEL_TAG}: {num_params/1e6:.2f} M")
+     ```  
+
+> ✅ Once inserted, no edits are needed — the pipeline automatically manages training, metrics, visualization, calibration, and speed/VRAM benchmarking.
 
 ---
 
 ## 📚 Available Models
 
-### 1) TransUNet (Default)
-Already embedded in each dataset notebook as the **default** example.  
-- **Action:** *No copy needed.* You can replace it with any model below by following the flow above.
+### 1️⃣ TransUNet (Default)
+Already included in every dataset notebook as the **default baseline**.  
+*No copy required — use as is.*
 
 ---
 
-### 2) U-Net
-- **Open in Colab:**  
-  <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/U_Net.ipynb" target="_blank">
-    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open U-Net in Colab"/>
-  </a>
-
-**Copy into Step 6:**
-- Cell A: `UNet` class (+ small helpers if any)  
-- Cell B: `model = UNet(num_classes=C, ...); MODEL_TAG = "UNet"`
+### 2️⃣ U-Net (R34 Encoder)
+<a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/U_Net.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open U-Net in Colab"/>
+</a>  
+- Copy **Cells 1/4 – 4/4** into Step 6 of your dataset notebook.
 
 ---
 
-### 3) U-Net++
-- **Open in Colab:**  
-  <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/U_Net_PlusPlus.ipynb" target="_blank">
-    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open U-Net++ in Colab"/>
-  </a>
-
-**Copy into Step 6:**
-- Cell A: `UNetPlusPlus` (a.k.a. `UNetPP`) class (+ dense-skip helpers)  
-- Cell B: `model = UNetPlusPlus(num_classes=C, ...); MODEL_TAG = "UNet++"`
+### 3️⃣ U-Net++ (Dense Skip Connections)
+<a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/U_Net_PlusPlus.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open U-Net++ in Colab"/>
+</a>  
+- Copy **Cells 1/4 – 4/4** into Step 6 of your dataset notebook.
 
 ---
 
-### 4) DeepLabV3+
-- **Open in Colab:**  
-  <a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/DeepLabV3%2B.ipynb" target="_blank">
-    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open DeepLabV3+ in Colab"/>
-  </a>
-
-**Copy into Step 6:**
-- Cell A: `DeepLabV3Plus` definition (or wrapper around torchvision/timm)  
-- Cell B: `model = DeepLabV3Plus(num_classes=C, ...); MODEL_TAG = "DeepLabV3+"`
+### 4️⃣ DeepLabV3+ (ResNet-50 Backbone)
+<a href="https://colab.research.google.com/github/HussamUmer/MedSegBench-SegLab/blob/main/Segmentation%20Models/DeepLabV3%2B.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open DeepLabV3+ in Colab"/>
+</a>  
+- Copy **Cells 1/4 – 4/4** into Step 6 of your dataset notebook.
 
 ---
 
-### ✅ Quick Checklist (before you run)
+### ✅ Before Running
+- [ ] Correct `C` value (Binary → 1; Multiclass → #classes).  
+- [ ] `forward(x)` returns `{"logits": B × C × H × W}`.  
+- [ ] `IMAGE_SIZE` matches dataset (128 / 256 / 512).  
+- [ ] `AMP_ON` (mixed precision) can remain True.  
 
-- [ ] `C` is correct (Binary → `C=1`; Multiclass → number of classes).  
-- [ ] `forward(x)` returns `{"logits": B×C×H×W}` (dict key **must** be `"logits"`).  
-- [ ] `IMAGE_SIZE` matches your dataset notebook (128/256/512).  
-- [ ] Mixed precision (`AMP_ON`) can stay **on**; no model change needed.  
-
-> 🔧 I’m actively adding more **Step-6 plug-and-play models**. If you have a favorite architecture, open a PR or request—happy to include it!
+> 🔧 More Step-6 plug-and-play models are coming soon! If you want a specific architecture, open a PR or request it — I’ll add it to the collection ✨
 
 
 ---
